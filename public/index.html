@@ -1,150 +1,1040 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelghafaar Nashaat - Full Stack Web Developer</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Your custom CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="bg-dark text-white text-center py-5">
-        <h1>Abdelghafaar Nashaat Abdelghafaar</h1>
-        <p>Full Stack Web Developer</p>
-        <p>Nasr City, Cairo | abdelghafaarnashaat@gmail.com | +201126565444</p>
-        <p><a href="https://www.linkedin.com/in/abdelghafaar-nashaat" class="text-white">LinkedIn</a> | <a href="https://github.com/AbdoNashaat" class="text-white">GitHub</a></p>
-    </header>
 
-    <section id="objective" class="container my-5">
-        <h2>Objective</h2>
-        <p>Software engineer with experience building secure, scalable web applications and APIs. Skilled in designing databases, implementing RESTful services, and developing responsive user interfaces. Beyond technical expertise, I bring strong communication skills and proven experience working in diverse teams, coordinating tasks, and ensuring a smooth workflow to deliver projects efficiently and effectively.</p>
-    </section>
+  <!--
+    - #MAIN
+  -->
 
-    <section id="education" class="container my-5">
-        <h2>Education</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Information Technology Institute (ITI)</h3>
-                <p>July 2025 — Jan 2026</p>
-                <p>Full-Stack Web Development with PHP</p>
-                <p>Graduation Project Grade: Excellent</p>
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./images/Professional 1.jpeg" alt="Abdelghafaar Nashaat" style="border-radius: 25px;">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Abdelghafaar Nashaat">Abdelghafaar Nashaat</h1>
+
+          <p class="title">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-            <div class="col-md-6">
-                <h3>Eastern Mediterranean University (EMU)</h3>
-                <p>Sep 2018 — May 2024</p>
-                <p>Bachelor's degree in Computer Engineering</p>
-                <p>Graduation Grade: 3.1 CGPA (Honor)</p>
-                <p>Graduation Project Grade: A (Excellent)</p>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <a href="mailto:abdelghafaarnashaat@gmail.com" class="contact-link"
+                  id="email-text">abdelghafaarnashaat@gmail.com</a>
+
+                <button class="copy-btn" onclick="copyEmail()"
+                  style="background: none; border: none; cursor: pointer; color: var(--orange-yellow-crayola); padding: 0; display: flex;">
+                  <ion-icon name="copy-outline" id="copy-icon" style="font-size: 18px;"></ion-icon>
+                </button>
+              </div>
             </div>
-        </div>
-    </section>
 
-    <section id="experience" class="container my-5">
-        <h2>Experience</h2>
-        <div class="mb-4">
-            <h3>Full-stack Web Developer — Hala Ticaret Ltd. (Northern Cyprus)</h3>
-            <p>May 2024 – July 2024</p>
-            <p>Tech Stack: HTML5, CSS3, JS, Bootstrap, Firebase</p>
-            <ul>
-                <li>Built a restaurant website that increased the total number of orders by 10%</li>
-                <li>The system supported product listings, user accounts, and ordering functionality with discounts, special offers, order tracking updates, and multiple languages support (Turkish, English, Arabic)</li>
-                <li>Serverless for easier maintenance and management.</li>
-                <li>Developed a clean minimalist UI using HTML5, CSS3 with bootstrap and JS for the best customer ordering experience.</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Procurement Engineer — MEP (Cairo, Egypt)</h3>
-            <p>Sep 2024 – Dec 2024</p>
-            <p>Tech Stack: Soft Skills, Team Work, Documentation</p>
-            <ul>
-                <li>Prepared and reviewed orders while coordinating with different teams and clients.</li>
-                <li>This role strengthened my attention to details, problem-solving, and ability to manage requirements under tight deadlines.</li>
-                <li>Coordinating between people from different backgrounds and roles enhanced my teamwork and organizational skills.</li>
-            </ul>
-        </div>
-    </section>
+          </li>
 
-    <section id="projects" class="container my-5">
-        <h2>Projects</h2>
-        <div class="mb-4">
-            <h3>Dawarly — Freelance Job Matching Platform — ITI (New Capital, Egypt)</h3>
-            <p>Dec 2025 – Jan 2026</p> <!-- Note: Adjusted date based on CV -->
-            <p>Tech Stack: React, Redux, Nodejs, Laravel, Microservices, PostgreSQL, RAG Embedding, AWS (EC2, S3), GitHub Actions, Docker</p>
-            <ul>
-                <li>Designed and built a semantic job recommendation app that matches freelance workers to postings using AI-powered text embeddings (1024-dim vectors).</li>
-                <li>Implemented automated job ingestion from freelancing platforms using APIs and scraping, and batch embedding via Hugging Face Inference API.</li>
-                <li>Created a vector-based search system with pgvector (HNSW index) for cosine similarity matching, hybrid scoring (semantic + keyword bonus + recency boost), and platform/tier-based filtering (free vs premium)</li>
-                <li>Developed multi-profile support allowing users to store multiple skill sets/experiences, each with its own embedding, and select active profile for matching.</li>
-                <li>Deployed on AWS EC2 with Github actions with scheduled cleanup of old jobs to maintain database freshness and performance.</li>
-            </ul>
-        </div>
-        <!-- Add similar blocks for Ketabi, Soukori, EzRecycle, and Embedded Baby Incubator System -->
-        <div class="mb-4">
-            <h3>Ketabi — Online Bookstore Marketplace — ITI (New Capital, Egypt)</h3>
-            <p>Oct 2025 – Nov 2025</p>
-            <p>Tech Stack: MEAN, RAG Embedding, Swagger, AWS, Github actions</p>
-            <ul>
-                <li>Collaborated in a 5-member team to build a full-stack bookstore marketplace.</li>
-                <li>Role based access control (Customer, Admin, Seller) with dashboards for each role.</li>
-                <li>Implemented publisher order handling and sales tracking for multi-vendor functionality.</li>
-                <li>Developed and optimized back-end modules for cart management, order processing, checkout integrations (Stripe, Paymob, PayPal), and coupon systems.</li>
-                <li>Built an AI powered chatbot that had access to the books using a RAG system to suggest books to the customer based on his preferances.</li>
-                <li>Built secure payment flows and webhook logic for post-payment order updates, stock management, and refund processing.</li>
-                <li>Managed version control, code reviews and conflicts with team members on GitHub.</li>
-            </ul>
-        </div>
-        <div class="mb-4">
-            <h3>Soukori, E-Commerce Website — ITI (New Capital, Egypt)</h3>
-            <p>Sep 2025 – Oct 2025</p>
-            <p>Tech Stack: JS, HTML5, CSS3, Bootstrap, Firebase, GitHub, Stripe</p>
-            <ul>
-                <li>Built an e-commerce platform for a clothing brand.</li>
-                <li>Supported product browsing, cart management, profile management, order tracking, stock updates, admin dashboard and secure checkout.</li>
-                <li>Integrated Firebase Firestore for real-time data (products, orders, users, reviews).</li>
-                <li>Implemented webhooks on firebase functions to handle payment, orders, and stock updates</li>
-                <li>Designed a responsive UI with Bootstrap and JS for seamless user experience.</li>
-                <li>Deployed using Firebase hosting with Firebase functions for webhooks.</li>
-                <li>Managed version control, code reviews and conflicts with team members on GitHub.</li>
-            </ul>
-        </div>
-        <div class="mb-4">
-            <h3>EzRecycle Mobile Application (Graduation Project) — EMU (Northern Cyprus)</h3>
-            <p>Sep 2023 – May 2024</p>
-            <p>Tech Stack: Flutter, Dart, Firebase, GitHub</p>
-            <ul>
-                <li>Led a 4-member team as product manager & lead developer.</li>
-                <li>Designed and implemented a cross-platform mobile app to encourage recycling.</li>
-                <li>Built core features including authentication, database integration, and tracking recycling stations, map directions, points & more.</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Embedded Baby Incubator System (Course Project) — EMU (Northern Cyprus)</h3>
-            <p>Jan 2023 – Sep 2023</p>
-            <p>Tech Stack: Arduino, Node-RED</p>
-            <ul>
-                <li>Developed an Arduino-based system with sensors, alarms, and real-time dashboards to monitor infant incubators.</li>
-                <li>Implemented data logging and visualization using Node-RED.</li>
-            </ul>
-        </div>
-    </section>
+          <li class="contact-item">
 
-    <section id="skills" class="container my-5">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> JavaScript, TypeScript, Php, SQL, HTML, CSS</li>
-            <li><strong>Frameworks & Libraries:</strong> Node.js, Express.js, Laravel (Livewire, Blade), Angular, React</li>
-            <li><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL, Firebase</li>
-            <li><strong>Tools & Platforms:</strong> GitHub (Version Control, Actions, Guards), Firebase, AWS, Docker</li>
-            <li><strong>Concepts:</strong> RESTful APIs, RBAC, Authentication & Authorization, Webhooks, Searching & Filtering, Server-side rendering, Database Design & Optimization, RAG, Use Cases, Testing</li>
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+201126565444" class="contact-link">+20 112 656 5444</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">Jan 15, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Cairo, Egypt</address>
+            </div>
+
+          </li>
+
         </ul>
-    </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>Military Status: Exempted</p>
-        <p>&copy; 2026 Abdelghafaar Nashaat</p>
-    </footer>
+        <div class="separator"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script> <!-- Your custom JS -->
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/AbdoNashaat" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/abdelghafaar-nashaat/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+              <div class="sidebar-footer"
+          style="margin-top: 25px; display: flex; justify-content: center; padding-top: 20px; border-top: 1px solid var(--jet);">
+          <a href="./Abdelghafaar N. CV.pdf" download="Abdelghafaar_Nashaat_CV.pdf" class="download-cv-btn">
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li> -->
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a software engineer who enjoys building web apps.
+          </p>
+          <p>
+            I also enjoy learning how they work beneath the abstraction layer.
+          </p>
+        </section>
+
+
+        <header>
+          <h2 class="h2 article-title">Tech Stack</h2>
+        </header>
+
+        <section class="about-text">
+          <div class="tech-category">
+            <h3>Backend</h3>
+            <div class="tech-icons">
+              <div class="tech-item">
+                <ion-icon name="logo-nodejs"></ion-icon>
+                <span>Node.js</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="logo-buffer"></ion-icon>
+                <span>Express.js</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="logo-laravel"></ion-icon>
+                <span>Laravel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <h3>Frontend</h3>
+            <div class="tech-icons">
+              <div class="tech-item">
+                <ion-icon name="logo-react"></ion-icon>
+                <span>React</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="logo-angular"></ion-icon>
+                <span>Angular</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="logo-html5"></ion-icon>
+                <span>HTML5</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <h3>Database</h3>
+            <div class="tech-icons">
+              <div class="tech-item">
+                <ion-icon name="server-outline"></ion-icon>
+                <span>MongoDB</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="server-outline"></ion-icon>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="server-outline"></ion-icon>
+                <span>Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <h3>Deployment</h3>
+            <div class="tech-icons">
+              <div class="tech-item">
+                <ion-icon name="logo-docker"></ion-icon>
+                <span>Docker</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="cloud-outline"></ion-icon>
+                <span>AWS</span>
+              </div>
+              <div class="tech-item">
+                <ion-icon name="logo-github"></ion-icon>
+                <span>Actions</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/icon-database.png" alt="Database design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Database Design</h4>
+                <p class="service-item-text">
+                  Designing efficient, scalable databases with proper schemas, relationships, normalization, and
+                  optimization for performance.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/icon-api.png" alt="API building icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Building APIs</h4>
+                <p class="service-item-text">
+                  Creating secure, RESTful APIs with proper middlewares and documentation.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/algorithm.png" alt="Algorithms icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming Concepts</h4>
+                <p class="service-item-text">
+                  Studying and implementing system design ,data structures, algorithms, design patterns, and competitive
+                  programming concepts.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./images/artificial.png" alt="AI workflow icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI Utilization</h4>
+                <p class="service-item-text">
+                  Integrating AI tools (code generation, debugging, automation, content creation) to boost productivity
+                  and enhance development processes.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Full-Stack Web Development</h4>
+
+              <div class="timeline-subtitle">
+                <strong>Information Technology Institute (ITI)</strong>
+                <span class="timeline-location">New Capital, Egypt</span>
+              </div>
+
+              <span class="timeline-date">July 2025 — Jan 2026</span>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor of Science in Computer Engineering</h4>
+
+              <div class="timeline-subtitle">
+                <strong>Eastern Mediterranean University (EMU)</strong>
+                <span class="timeline-location">Famagusta, Cyprus</span>
+              </div>
+
+              <span class="timeline-date">Sep 2018 — May 2024</span>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Systems Administrator — MEP (Cairo, Egypt)</h4>
+              <span>Sep 2024 — Dec 2024</span>
+              <p class="timeline-text">
+                Managed core IT infrastructure and server environments, ensuring 99.9% uptime for business-critical
+                applications.
+                Administered Google Workspace and utilized Pulseway for remote monitoring and automated maintenance
+                scripts.
+                Engineered secure network configurations (Firewalls, VPNs) and implemented robust NAS-based backup and
+                data
+                archiving strategies to ensure total business continuity.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full-stack Web Developer — Hala Ticaret Ltd. (Northern Cyprus)</h4>
+              <span>May 2024 — July 2024</span>
+              <p class="timeline-text">
+                Developed a multilingual restaurant e-commerce platform using a serverless Firebase architecture,
+                resulting in
+                a 10% increase in orders. Built a minimalist, high-performance UI using Bootstrap and JS, featuring user
+                accounts, automated discount logic, and real-time order tracking updates.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <!-- <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article> -->
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./js/scripts.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
