@@ -516,7 +516,7 @@ grid-template-columns: repeat(3, 1fr);
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   padding-bottom: 4px;
