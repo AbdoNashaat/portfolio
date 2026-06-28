@@ -38,6 +38,38 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
+// project rendering logic
+const projectListContainer = document.getElementById("project-list");
+
+if (projectListContainer && typeof projectsData !== 'undefined') {
+  projectsData.forEach(project => {
+    const techStackHtml = project.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('\n                  ');
+
+    const projectItem = document.createElement("li");
+    projectItem.className = "project-item active";
+    projectItem.dataset.filterItem = "";
+    projectItem.dataset.category = project.category;
+
+    projectItem.innerHTML = `
+      <a href="${project.link}" ${project.target ? `target="${project.target}"` : ''} ${project.target === '_blank' ? 'rel="noopener noreferrer"' : ''}>
+        <figure class="project-img">
+          <div class="project-item-icon-box">
+            <ion-icon name="eye-outline"></ion-icon>
+          </div>
+          <img src="${project.image}" alt="${project.title}" loading="lazy">
+        </figure>
+        <h3 class="project-title">${project.title} <i style="color: #777;">${project.subtitle}</i></h3>
+        <p class="project-category">${project.categoryLabel}</p>
+        <p class="project-desc">${project.desc}</p>
+        <div class="project-tech-stack">
+          ${techStackHtml}
+        </div>
+      </a>
+    `;
+    projectListContainer.appendChild(projectItem);
+  });
+}
+
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
